@@ -4,44 +4,46 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      <span class="font-weight-lighter text-small">CATEGORIAS E TÓPICOS</span>
     </ion-title>
     <ion-buttons slot="end">
-      <ion-searchbar></ion-searchbar>
+      <input class="rounded-pill-left border-0 p-2">
+      <button class="rounded-pill-right border-0 p-2">🔍</button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="d-flex ion-justify-content-center">
+  <div class="d-flex ion-justify-content-center h-auto align-items-end">
     <ion-img
       src="assets/logo.png"
       style="width: 100px"
       class="ion-margin-vertical"
     ></ion-img>
-    <div>
-      <h1>
-        Forum
+    <div class="text-white ml-4 pb-3">
+      <h1 class="mb-0">
+        <strong>FÓRUM</strong>
       </h1>
-      <h1>Cartilha da Cidade</h1>
+      <h1 class="page-title-bottom">CARTILHA DA CIDADE</h1>
     </div>
   </div>
 
   <ion-row>
     <ion-col>
       <ion-card style="background-color: white;">
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="d-flex">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="d-flex align-items-center justify-content-center">
           <ion-item lines="none">
             <ion-label position="fixed">Usuário:</ion-label>
-            <ion-input formControlName="email"></ion-input>
+            <ion-input class="h-50" style="background: rgba(60, 185, 185, 0.2)" formControlName="email"></ion-input>
           </ion-item>
           <ion-item lines="none">
             <ion-label position="fixed">Senha:</ion-label>
-            <ion-input formControlName="password"></ion-input>
+            <ion-input class="h-50" style="background: rgba(60, 185, 185, 0.2)" formControlName="password"></ion-input>
           </ion-item>
-          <ion-button color="light" type="submit">Entrar</ion-button>
-          <p>
-            Não possui conta? Cadastre-se
+          <button color="light" class="background-tertiary text-white px-3 rounded-pill" type="submit">Entrar</button>
+          <p class="d-flex text-smaller flex-column mb-0 ml-2">
+            <span>Não possui conta?</span>
+            <a href="#" class="text-tertiary">Cadastre-se</a>
           </p>
         </form>
       </ion-card>
@@ -51,7 +53,7 @@
   <ion-row>
     <ion-col>
       <ion-card style="background-color: white;">
-        <h2 class="ion-padding-horizontal">
+        <h2 class="text-tertiary ion-padding-horizontal mt-2 font-weight-bold">
           Tópicos Populares
         </h2>
         <ion-list>
@@ -75,7 +77,7 @@
     </ion-col>
     <ion-col>
       <ion-card style="background-color: white;">
-        <h2 class="ion-padding-horizontal">
+        <h2 class="text-tertiary ion-padding-horizontal mt-2 font-weight-bold">
           Tópicos Recentes
         </h2>
         <ion-list>
@@ -99,27 +101,51 @@
     </ion-col>
     <ion-col>
       <ion-card style="background-color: white;">
-        <h2 class="ion-padding-horizontal">
+        <h2 class="text-tertiary ion-padding-horizontal mt-2 font-weight-bold">
           Informativos
         </h2>
         <ion-list>
           <ion-item>
-            Lorem
+            <span class="w-100 d-flex justify-content-between">
+              <span>Lorem</span>
+              <span class="faded">20/08/2019</span>
+            </span>
           </ion-item>
           <ion-item>
-            Lorem
+            <span class="w-100 d-flex justify-content-between">
+              <span>Lorem</span>
+              <span class="faded">20/08/2019</span>
+            </span>
           </ion-item>
           <ion-item>
-            Lorem
+            <span class="w-100 d-flex justify-content-between">
+              <span>Lorem</span>
+              <span class="faded">20/08/2019</span>
+            </span>
           </ion-item>
           <ion-item>
-            Lorem
+            <span class="w-100 d-flex justify-content-between">
+              <span>Lorem</span>
+              <span class="faded">20/08/2019</span>
+            </span>
           </ion-item>
           <ion-item>
-            Lorem
+            <span class="w-100 d-flex justify-content-between">
+              <span>Lorem</span>
+              <span class="faded">20/08/2019</span>
+            </span>
           </ion-item>
         </ion-list>
       </ion-card>
     </ion-col>
   </ion-row>
+  <ion-footer>
+    <ion-toolbar color="secondary">
+      <ion-title class="text-center">
+        <h1>
+          Footer
+        </h1>
+      </ion-title>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>

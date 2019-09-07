@@ -17,5 +17,9 @@ export class HomePage {
     console.log(form);
   }
 
+  public click(e) {
+    e.preventDefault();
+  }
+
   constructor() {}
 }

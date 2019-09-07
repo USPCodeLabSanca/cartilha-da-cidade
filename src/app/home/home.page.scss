@@ -1,4 +1,58 @@
+.text-primary{
+  color: var(--ion-color-primary) !important;
+}
+
+.text-secondary{
+  color: var(--ion-color-secondary) !important;
+}
+
+.text-tertiary{
+  color: var(--ion-color-tertiary) !important;
+}
+
+.background-primary{
+  background-color: var(--ion-color-primary) !important;
+}
+
+.background-secondary{
+  background-color: var(--ion-color-secondary) !important;
+}
+
+.background-tertiary{
+  background-color: var(--ion-color-tertiary) !important;
+}
+
+.faded {
+  opacity: 0.5;
+}
+
+.rounded-pill-left {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.rounded-pill-right {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
 .welcome-card img {
   max-height: 35vh;
   overflow: hidden;
+}
+
+ion-footer h1{
+  color: rgba($color: #000000, $alpha: 0.2)
+}
+
+.page-title-bottom {
+  letter-spacing: 2px;
+}
+
+.text-smaller {
+  font-size: 11px;
+}
+
+.text-small {
+  font-size: 14px;
 }
