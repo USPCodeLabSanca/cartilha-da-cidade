@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  backendURL: 'https://us-central1-cartilha-da-cidade.cloudfunctions.net/restApi'
 };

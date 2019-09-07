@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  backendURL: 'https://us-central1-cartilha-da-cidade.cloudfunctions.net/restApi'
 };
 
 /*
