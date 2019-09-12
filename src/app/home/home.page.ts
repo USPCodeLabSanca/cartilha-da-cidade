@@ -7,6 +7,13 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
+  public isRegistering = false;
+
+  public register(e) {
+    e.preventDefault();
+    this.isRegistering = !this.isRegistering;
+  }
+
   public loginForm = new FormGroup({
     email: new FormControl(''),
     password: new FormControl('')

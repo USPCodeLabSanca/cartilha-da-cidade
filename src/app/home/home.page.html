@@ -43,14 +43,14 @@
           <button color="light" class="background-tertiary text-white px-3 rounded-pill" type="submit">Entrar</button>
           <p class="d-flex text-smaller flex-column mb-0 ml-2">
             <span>Não possui conta?</span>
-            <a href="#" class="text-tertiary">Cadastre-se</a>
+            <a href="#" class="text-tertiary" (click)="register($event)">Cadastre-se</a>
           </p>
         </form>
       </ion-card>
     </ion-col>
   </ion-row>
 
-  <ion-row>
+  <ion-row *ngIf="!isRegistering" class="mb-5">
     <ion-col>
       <ion-card style="background-color: white;">
         <h2 class="text-tertiary ion-padding-horizontal mt-2 font-weight-bold">
@@ -137,6 +137,101 @@
           </ion-item>
         </ion-list>
       </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="isRegistering" style="margin: 0 10px;">
+    <ion-col>
+      <ion-grid class="white-background-color pb-2 rounded mb-5" style="box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);">
+        <ion-row>
+          <ion-col>
+            <h2 class="text-tertiary font-weight-bold">Cadastro</h2>
+          </ion-col>
+        </ion-row>
+        <ion-row class="height-min-content">
+          <ion-col>
+            <div class="termo">
+              <div class="termo-container ml-5 p-2 light-gray-background-color h-100">
+                <div>Termo de concordancia</div>
+                <hr>
+                <div class="termo-texto">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum maiores quasi doloribus odit error, quidem suscipit hic corrupti nesciunt blanditiis ratione excepturi ipsa soluta nam consequatur nobis illum eligendi neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum maiores quasi doloribus odit error, quidem suscipit hic corrupti nesciunt blanditiis ratione excepturi ipsa soluta nam consequatur nobis illum eligendi neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum maiores quasi doloribus odit error, quidem suscipit hic corrupti nesciunt blanditiis ratione excepturi ipsa soluta nam consequatur nobis illum eligendi neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum maiores quasi doloribus odit error, quidem suscipit hic corrupti nesciunt blanditiis ratione excepturi ipsa soluta nam consequatur nobis illum eligendi neque!
+                </div>
+              </div>
+              <span class="ml-2">
+                <input class="ml-5 mt-3" type="checkbox"> Li e aceito o termo de concordancia
+              </span>
+            </div>
+          </ion-col>
+          <ion-col class="ml-5">
+            <ion-grid class="p-0 m-0">
+              <ion-row>
+                <ion-col>
+                  <ion-input class="light-gray-background-color" type="text" placeholder="Name"></ion-input>
+                </ion-col>
+                <ion-col>
+                  <ion-input class="light-gray-background-color" type="text" placeholder="Sobrenome"></ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-input class="light-gray-background-color" type="text" placeholder="Endereço de Email"></ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-input class="light-gray-background-color" type="text" placeholder="Senha"></ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-input class="light-gray-background-color" type="text" placeholder="Ocupação"></ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-input class="light-gray-background-color" type="text" placeholder="Cidade"></ion-input>
+                </ion-col>
+                <ion-col>
+                  <ion-input class="light-gray-background-color" type="text" placeholder="Estado"></ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <button class="w-100 d-flex connect-button py-1 px-2 white-background-color border rounded">
+                    <span class="d-flex flex-column justify-content-start text-left">
+                      <span style="font-size: 12px;">Conectar com</span>
+                      <span style="font-size: 16px;">Facebook</span>
+                    </span>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button class="w-100 d-flex connect-button py-1 px-2 white-background-color border rounded">
+                    <span class="d-flex flex-column justify-content-start text-left">
+                      <span style="font-size: 12px;">Conectar com</span>
+                      <span style="font-size: 16px;">Google</span>
+                    </span>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button
+                    style="font-size: 16px;"
+                    class="
+                      h-100
+                      w-100
+                      text-white
+                      rounded-pill
+                      py-1
+                      px-3
+                      background-tertiary"
+                  >
+                    Inscrever-se
+                  </button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-col>
   </ion-row>
   <ion-footer>
